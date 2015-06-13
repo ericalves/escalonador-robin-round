@@ -1,6 +1,6 @@
 # Escalonador de processos utilizando algoritmo de Round-Robin
 ## Simulador
-Veja o simulador funcionando [aqui](http://ericalves.github.io/escalonador-robin-round “Clique e acesse o simulador”).
+Veja o simulador funcionando [aqui](http://ericalves.github.io/escalonador-robin-round).
 
 
 ## Objetivo
@@ -52,6 +52,6 @@ Também durante a execução do simulador, dados do funcionamento do escalonador
 
 
 ##Integrantes
-[Eric Alves da Rocha](https://github.com/ericalves “Perfil”)
+[Eric Alves da Rocha](https://github.com/ericalves)
 Gabriel Eduardo Martini
 Renan Correia da Silva
