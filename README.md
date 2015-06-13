@@ -1,17 +1,20 @@
 # Escalonador de processos utilizando algoritmo de Round-Robin
 ## Simulador
-Veja o simulador funcionando aqui.
+Veja o simulador funcionando [aqui](http://ericalves.github.io/escalonador-robin-round “Clique e acesse o simulador”).
+
 
 ## Objetivo
 Este trabalho tem por objetivo implementar o algoritmo de escalonamento de processos de Round-Robin em um simulador de escalonamento de processos, com finalidade de obter maiores conhecimentos sobre escalonamento de processos em estudos para a disciplina de Sistemas Operacionais dos cursos de Ciência da computação e Sistemas de Informação da Universidade Feevale.
 
+
 ##Funcionamento do escalonador
 
-Uma unidade de tempo, denominada **Quantum** é definida. Esta unidade será o tempo que cada processo ficará em execução na CPU. Caso o tempo de execução do processo que está sendo executado pela CPU atinja valor igual o Quantum, este processo é realocado para o final da fila de processos e a CPU é alocada para a execução do próximo processo da fila.
+Uma unidade de tempo, denominada Quantum é definida. Esta unidade será o tempo que cada processo ficará em execução na CPU. Caso o tempo de execução do processo que está sendo executado pela CPU atinja valor igual o Quantum, este processo é realocado para o final da fila de processos e a CPU é alocada para a execução do próximo processo da fila.
 No funcionamento do escalonador, o processador retira o primeiro processo da fila e inicia a sua execução. Caso a execução não esteja finalizada após o decorrer de um Quantum, ocorre uma interrupção no processamento e o processo é inserido no fim da fila.
 Caso a execução do processo finalize antes de um Quantum, a CPU é liberada e inicia a execução do próximo processo.
-Na casualidade de ocorrer **I/O**, a CPU também é liberada para a execução do próximo processo da fila. Caso o processo com I/O chegue na CPU para execução já com a entrada, este entra em rotina de processamento.
+Na casualidade de ocorrer I/O, a CPU também é liberada para a execução do próximo processo da fila. Caso o processo com I/O chegue na CPU para execução já com a entrada, este entra em rotina de processamento.
 O valor de quantum para utilização em um escalonador de Round Robin é recomendado entre *10ms* e *100ms*, por serem valores medianos. Um Quantum muito baixo gerará um custo alto de troca de contexto (processo de troca de processo em execução), enquanto um Quantum muito alto gerará demora na execução dos próximos processos.
+
 
 ##Instruções de utilização
 
@@ -23,6 +26,7 @@ Dados a serem informados para o início da simulação:
 * **Tempo de espera de I/O**: Informado em ms, determina a quantidade de tempo que o processo esperará pela entrada ou saída de dados até ser retomada sua execução.
 
 *ms: Milissegundos, unidade de tempo, onde 1 Minuto = 60000 Milissegundos.
+
 
 ##Execução
 
@@ -45,3 +49,9 @@ Também durante a execução do simulador, dados do funcionamento do escalonador
     * **Concluído**: Indica que o processo já esteve em execução por um tempo necessário para que esgote seu tempo de vida. Em casos de processos que possuam I/O Bound, esta interrupção também já foi finalizada. Indica que a execução do processo foi finalizada;
     * **Esperando IO**: Indica que o processo está aguardando I/O Bound. Na coluna Tempo de espera (restante), é possível visualizar por quanto tempo este processo ainda ficará aguardando I/O para que, ao finalizar este tempo, entre em execução;
     * **Processando**: Indica que a CPU está alocada para este processo durante um Quantum.
+
+
+##Integrantes
+[Eric Alves da Rocha](https://github.com/ericalves “Perfil”)
+Gabriel Eduardo Martini
+Renan Correia da Silva
