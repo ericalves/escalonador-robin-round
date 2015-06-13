@@ -1,0 +1,44 @@
+#process-container {
+	background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    display: block;
+    font-size: 13px;
+    line-height: 1.42857;
+    margin: 0 0 10px;
+    padding: 9.5px;
+    word-break: break-all;
+    word-wrap: break-word;
+    font-family: Consolas,monaco,monospace;
+    overflow:auto !auto; 
+    /*height: 400px;*/
+}
+    
+.table > tbody > tr > td {
+	border: 0px;
+}
+
+.title-column {
+	padding-bottom: 25px;
+}
+
+.processo-status-pronto {
+    color: black;
+}
+
+.processo-status-processando {
+    color: red;
+}
+
+.processo-status-aguardando {
+    color: black;
+}
+
+.processo-status-concluido {
+    color: blue;
+}
+
+.processo-status-esperando-io {
+    color: green;
+}
