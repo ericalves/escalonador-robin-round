@@ -10,9 +10,13 @@ Este trabalho tem por objetivo implementar o algoritmo de escalonamento de proce
 ##Funcionamento do escalonador
 
 Uma unidade de tempo, denominada Quantum é definida. Esta unidade será o tempo que cada processo ficará em execução na CPU. Caso o tempo de execução do processo que está sendo executado pela CPU atinja valor igual o Quantum, este processo é realocado para o final da fila de processos e a CPU é alocada para a execução do próximo processo da fila.
+
 No funcionamento do escalonador, o processador retira o primeiro processo da fila e inicia a sua execução. Caso a execução não esteja finalizada após o decorrer de um Quantum, ocorre uma interrupção no processamento e o processo é inserido no fim da fila.
+
 Caso a execução do processo finalize antes de um Quantum, a CPU é liberada e inicia a execução do próximo processo.
+
 Na casualidade de ocorrer I/O, a CPU também é liberada para a execução do próximo processo da fila. Caso o processo com I/O chegue na CPU para execução já com a entrada, este entra em rotina de processamento.
+
 O valor de quantum para utilização em um escalonador de Round Robin é recomendado entre *10ms* e *100ms*, por serem valores medianos. Um Quantum muito baixo gerará um custo alto de troca de contexto (processo de troca de processo em execução), enquanto um Quantum muito alto gerará demora na execução dos próximos processos.
 
 
@@ -52,6 +56,9 @@ Também durante a execução do simulador, dados do funcionamento do escalonador
 
 
 ##Integrantes
+
 [Eric Alves da Rocha](https://github.com/ericalves)
+
 Gabriel Eduardo Martini
+
 Renan Correia da Silva
